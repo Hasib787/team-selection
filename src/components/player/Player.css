@@ -1,0 +1,16 @@
+.player-container{ 
+    margin: 20px;
+    
+}
+.Player-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 70%;
+    margin-left: 20px;
+    margin-right: 5px;
+    border-right: 1px solid lightgray;
+}
+#image img{
+    height: 200px;
+    width:250px 
+}

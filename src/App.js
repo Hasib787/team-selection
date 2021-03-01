@@ -1,20 +1,21 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import players from './FakeData/FakeData.json';
+import playerData from './FakeData/FakeData.json';
 import { useEffect, useState } from 'react';
+import Player from './components/player/Player';
 
 
 function App() {
   const [player, setPlayer] = useState([]);
   useEffect(() => {
-    setPlayer(players);
-    console.log(players);
+    setPlayer(playerData);
   },[])
   return (
-    <div className="App">
-     <h1>Team Selection</h1>
+    <div>
+      <h1>All Players List:{player.length}</h1>
+        {
+          player.map(player=><Player player={player}></Player>)
+        }
     </div>
   );
 }
