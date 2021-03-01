@@ -26,7 +26,7 @@ const handleAddPlayer=(player)=>{
             players.map(player=><Player player={player} handleAddPlayer={handleAddPlayer}></Player>)
           }
       </div>
-      <div >
+      <div  className="selected-player">
         <PlayerCart playerCart={playerAdded}></PlayerCart>
       </div>
     </div>

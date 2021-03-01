@@ -10,7 +10,7 @@ const Player = (props) => {
     const handleAddPlayer = props.handleAddPlayer;
     return (
         
-        <div className="">
+        <div>
              <div className="Player-info" >
                     <div class="card penguin-card h-80 shadow pb-2">
                         <div id="image" class="p-4 m-3 penguin-img-bg product_item">
