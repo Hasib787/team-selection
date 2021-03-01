@@ -22,7 +22,7 @@ const Player = (props) => {
                         </div>
                         <div class="card-footer bg-transparent penguin-card-footer d-flex align-items-center justify-content-between ">
                             <h5 class="text-orange-color fw-bold fs-2">Salary: ${salary}</h5>
-                            <button onClick={()=>handleAddPlayer(props.player)} className="btn btn-primary" ><FontAwesomeIcon icon={faUserPlus}/> Add Player</button>
+                            <button onClick={()=>handleAddPlayer(props.player)} className="btn btn-success" ><FontAwesomeIcon icon={faUserPlus}/> Add Player</button>
                         </div>
                     </div>
                 </div>  
