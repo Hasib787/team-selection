@@ -18,6 +18,7 @@ const handleAddPlayer=(player)=>{
     const newPlayerAdded = [...playerAdded, player];
     setplayerAdded(newPlayerAdded);
 }
+
   return (
     <div className="player-container">
       <div >

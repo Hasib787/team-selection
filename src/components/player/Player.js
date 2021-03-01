@@ -4,18 +4,16 @@ import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import './Player.css'
 
 
-
 const Player = (props) => {
     const {name, image, salary}=props.player;
     const handleAddPlayer = props.handleAddPlayer;
     return (
-        
         <div>
              <div className="Player-info" >
                     <div class="card penguin-card h-80 shadow pb-2">
                         <div id="image" class="p-4 m-3 penguin-img-bg product_item">
                             <img class="card-img-top" src={image} alt="Jacket">
-                                </img>
+                            </img>
                         </div>
                         <div class="card-body pt-0">
                             <h3 class="card-title fw-bold fs-4 t-color">Name: {name}</h3>
