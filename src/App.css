@@ -1,10 +1,18 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.player-container{
+  display: flex; 
+  margin: 20px;
+  
+}
+.Player-info{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-bottom: 20px;
+  border-right: 1px solid lightgray;
+}
+#image img{
+  height: 200px;
+  width:250px 
 }
 
 @media (prefers-reduced-motion: no-preference) {

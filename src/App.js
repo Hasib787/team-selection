@@ -3,19 +3,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import playerData from './FakeData/FakeData.json';
 import { useEffect, useState } from 'react';
 import Player from './components/player/Player';
+import PlayerCart from './components/playerCart/PlayerCart';
 
 
 function App() {
-  const [player, setPlayer] = useState([]);
+  const [players, setPlayer] = useState([]);
+  const [playerAdded, setplayerAdded] = useState([]);
+
   useEffect(() => {
     setPlayer(playerData);
   },[])
+
+const handleAddPlayer=(player)=>{
+    const newPlayerAdded = [...playerAdded, player];
+    setplayerAdded(newPlayerAdded);
+}
   return (
-    <div>
-      <h1>All Players List:{player.length}</h1>
-        {
-          player.map(player=><Player player={player}></Player>)
-        }
+    <div className="player-container">
+      <div >
+          <h1>All Players List</h1>
+          {
+            players.map(player=><Player player={player} handleAddPlayer={handleAddPlayer}></Player>)
+          }
+      </div>
+      <div >
+        <PlayerCart playerCart={playerAdded}></PlayerCart>
+      </div>
     </div>
   );
 }
